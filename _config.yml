@@ -91,6 +91,11 @@ analytics:
     tracking_id          : G-8NGH9Y82B8
     anonymize_ip         : # true, false (default)
 
+ads:
+  enable               : true # false (default)
+  google:
+    tracking_id          : G-8NGH9Y82B8
+    anonymize_ip         : # true, false (default)
 
 # Site Author
 author:
