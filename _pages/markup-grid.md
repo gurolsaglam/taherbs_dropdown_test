@@ -1,6 +1,6 @@
 ---
 title: Markup (grid view)
-layout: tag
+layout: default
 permalink: /tags/markup-grid/
 taxonomy: markup
 entries_layout: grid

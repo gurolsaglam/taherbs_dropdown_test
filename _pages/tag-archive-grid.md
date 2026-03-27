@@ -1,7 +1,7 @@
 ---
 title: "Posts by Tag (grid view)"
 permalink: /tags-grid/
-layout: tags
+layout: default
 entries_layout: grid
 author_profile: true
 ---
