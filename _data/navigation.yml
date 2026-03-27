@@ -2,8 +2,6 @@
 main:
   - title: "About Me"
     url: /about/
-  - title: "Tech Stream"
-    url: /techstream/
   - title: Archive
     sublinks:
       - title: By Tag

@@ -73,27 +73,6 @@
   <meta property="og:image" content="{{ page_teaser_image }}">
 {% endif %}
 
-{% if site.twitter.username %}
-  <meta name="twitter:site" content="@{{ site.twitter.username | replace: "@", "" }}">
-  <meta name="twitter:title" content="{{ page.title | default: site.title | markdownify | strip_html | strip_newlines | escape_once }}">
-  <meta name="twitter:description" content="{{ seo_description }}">
-  <meta name="twitter:url" content="{{ canonical_url }}">
-
-  {% if page_large_image %}
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content="{{ page_large_image }}">
-  {% else %}
-    <meta name="twitter:card" content="summary">
-    {% if page_teaser_image %}
-      <meta name="twitter:image" content="{{ page_teaser_image }}">
-    {% endif %}
-  {% endif %}
-
-  {% if author_twitter %}
-    <meta name="twitter:creator" content="@{{ author_twitter }}">
-  {% endif %}
-{% endif %}
-
 {% if page.date %}
   <meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}">
 {% endif %}
@@ -136,23 +115,4 @@
     {% endif %}
   }
 </script>
-
-{% if site.google_site_verification %}
-  <meta name="google-site-verification" content="{{ site.google_site_verification }}" />
-{% endif %}
-{% if site.bing_site_verification %}
-  <meta name="msvalidate.01" content="{{ site.bing_site_verification }}">
-{% endif %}
-{% if site.alexa_site_verification %}
-  <meta name="alexaVerifyID" content="{{ site.alexa_site_verification }}">
-{% endif %}
-{% if site.yandex_site_verification %}
-  <meta name="yandex-verification" content="{{ site.yandex_site_verification }}">
-{% endif %}
-{% if site.naver_site_verification %}
-  <meta name="naver-site-verification" content="{{ site.naver_site_verification }}">
-{% endif %}
-{% if site.baidu_site_verification %}
-  <meta name="baidu-site-verification" content="{{ site.baidu_site_verification }}">
-{% endif %}
 <!-- end _includes/seo.html -->
