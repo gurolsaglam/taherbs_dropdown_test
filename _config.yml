@@ -1,14 +1,6 @@
-# Welcome to Jekyll!
 #
-# This config file is meant for settings that affect your entire site, values
-# which you are expected to set up once and rarely need to edit after that.
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# `jekyll serve`. If you change this file, please restart the server process.
-
-# Theme Settings
+# This file contains configuration flags to customize your site
 #
-# Review documentation to determine if you should use `theme` or `remote_theme`
-# https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/#installing-the-theme
 
 # Name of your site (displayed in the header)
 name: Gürol Saglam
@@ -66,56 +58,62 @@ enforce_ssl: https://www.gurolsaglam.github.io
 # then add in the baseurl here, like this: "/repository-name"
 baseurl: "/taherbs_dropdown_test"
 
+#
+# !! You don't need to change any of the configuration flags below !!
+#
 
+permalink: /:title/
 
+# The release of Jekyll Now that you're using
+version: v1.2.0
 
+# Jekyll 3 now only supports Kramdown for Markdown
+kramdown:
+  # Use GitHub flavored markdown, including triple backtick fenced code blocks
+  input: GFM
+  # Jekyll 3 and GitHub Pages now only support rouge for syntax highlighting
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    # Use existing pygments syntax highlighting css
+    css_class: 'highlight'
+  hard_wrap: false
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+  enable_coderay: false
 
-# Site Settings
-locale                   : "en-US"
-title                    : "THE EXPERIMENT"
-title_separator          : "-"
-subtitle                 : # site tagline that appears below site title in masthead
-repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
-teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
-logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
-masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
-# breadcrumbs            : false # true, false (default)
-words_per_minute         : 200
-comments:
-  provider               : # false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "staticman_v2" "custom"
-  discourse:
-    server               : # https://meta.discourse.org/t/embedding-discourse-comments-via-javascript/31963 , e.g.: meta.discourse.org
-  utterances:
-    theme                : # "github-light" (default), "github-dark"
-    issue_term           : # "pathname" (default)
-  staticman:
-    branch               : # "master"
-    endpoint             : # "https://{your Staticman v3 API}/v3/entry/github/"
-reCaptcha:
-  siteKey                :
-  secret                 :
-atom_feed:
-  path                   : # blank (default) uses feed.xml
-  hide                   : # true, false (default)
-search                   : # true, false (default)
-search_full_content      : # true, false (default)
-search_provider          : # lunr (default), algolia, google
-algolia:
-  application_id         : # YOUR_APPLICATION_ID
-  index_name             : # YOUR_INDEX_NAME
-  search_only_api_key    : # YOUR_SEARCH_ONLY_API_KEY
-  powered_by             : # true (default), false
-google:
-  search_engine_id       : # YOUR_SEARCH_ENGINE_ID
-  instant_search         : # false (default), true
+# Set the Sass partials directory, as we're using @imports
+sass:
+  style: :expanded # You might prefer to minify using :compressed
 
+# Use the following plug-ins
+plugins:
+  - jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem
+  - jekyll-feed # Create an Atom feed using the official Jekyll feed gem
+  - jekyll-seo-tag
+  - jekyll-paginate
+  - jekyll-gist
+  - jekyll-include-cache
 
+include: ['_pages']
 
+paginate: 6
+paginate_path: /_pages/page:num/
+
+# Exclude these files from your production _site
 # Reading Files
 include:
   - .htaccess
   - _pages
 exclude:
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - README.md
+  - README
+  - CNAME
   - "*.sublime-project"
   - "*.sublime-workspace"
   - vendor
@@ -129,16 +127,13 @@ exclude:
   - Capfile
   - CHANGELOG
   - config
-  - Gemfile
   - Gruntfile.js
   - gulpfile.js
-  - LICENSE
   - log
   - node_modules
   - package.json
   - package-lock.json
   - Rakefile
-  - README
   - tmp
   - /docs # ignore Minimal Mistakes /docs
   - /test # ignore Minimal Mistakes /test
@@ -149,6 +144,24 @@ encoding: "utf-8"
 markdown_ext: "markdown,mkdown,mkdn,mkd,md"
 
 
+
+
+
+# Site Settings
+locale                   : "en-US"
+title                    : "THE EXPERIMENT"
+title_separator          : "-"
+subtitle                 : # site tagline that appears below site title in masthead
+repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
+masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
+# breadcrumbs            : false # true, false (default)
+words_per_minute         : 200
+atom_feed:
+  path                   : # blank (default) uses feed.xml
+  hide                   : # true, false (default)
+
+
+
 # Conversion
 markdown: kramdown
 highlighter: rouge
@@ -156,17 +169,6 @@ lsi: false
 excerpt_separator: "\n\n"
 incremental: false
 
-
-# Markdown Processing
-kramdown:
-  input: GFM
-  hard_wrap: false
-  auto_ids: true
-  footnote_nr: 1
-  entity_output: as_char
-  toc_levels: 1..6
-  smart_quotes: lsquo,rsquo,ldquo,rdquo
-  enable_coderay: false
 
 
 # Sass/SCSS
@@ -176,27 +178,8 @@ sass:
 
 
 # Outputting
-permalink: /:categories/:title/
-paginate: 5 # amount of posts to show
-paginate_path: /page:num/
 timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
-
-# Plugins (previously gems:)
-plugins:
-  - jekyll-paginate
-  - jekyll-sitemap
-  - jekyll-gist
-  - jekyll-feed
-  - jekyll-include-cache
-
-# mimic GitHub Pages with --safe
-whitelist:
-  - jekyll-paginate
-  - jekyll-sitemap
-  - jekyll-gist
-  - jekyll-feed
-  - jekyll-include-cache
 
 
 # Archives
