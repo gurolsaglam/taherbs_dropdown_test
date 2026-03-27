@@ -10,17 +10,50 @@
 # Review documentation to determine if you should use `theme` or `remote_theme`
 # https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/#installing-the-theme
 
-# theme                  : "minimal-mistakes-jekyll"
-# remote_theme           : "mmistakes/minimal-mistakes"
-minimal_mistakes_skin    : "default" # "default", "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+# Name of your site (displayed in the header)
+name: Gürol Saglam
+
+# Name of the author
+author: Amit Merchant
+
+# Short bio or description (displayed in the header)
+description:
+
+# URL of your avatar or profile pic (you could use your GitHub profile pic)
+avatar: /images/gurolsaglam.jpg
+
+#
+# Flags below are optional
+#
+
+# Includes an icon in the footer for each username you enter
+footer-links:
+  dribbble:
+  email: gurolsaglam@gmail.com
+  facebook:
+  flickr:
+  github: gurolsaglam
+  instagram:
+  linkedin: gurolsaglam
+  pinterest:
+  rss:
+  twitter:
+  stackoverflow:
+  youtube: # channel/<your_long_string> or user/<user-name>
+  googleplus: # anything in your profile username that comes after plus.google.com/
+  playconsole:
+  mastodon: # <your-mastodon-instance>/@<your-user-name> eg. fosstodon.org/@username
+  googlescholar: iqtPWcYAAAAJ #your google scholar profile's user id number in the profile link. For example mine is: https://scholar.google.com/citations?user=iqtPWcYAAAAJ
+
+
+
+
 
 # Site Settings
 locale                   : "en-US"
 title                    : "THE EXPERIMENT"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
-name                     : "test"
-description              : "test"
 url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -97,13 +130,6 @@ ads:
     tracking_id          :
     anonymize_ip         : # true, false (default)
 
-# Site Author
-author:
-  name             : "test"
-  avatar           : "test"
-  bio              : "test"
-  location         : "test"
-  email            :
 
 # Reading Files
 include:
